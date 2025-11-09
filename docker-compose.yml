@@ -8,9 +8,9 @@ services:
     environment:
       - PORT=8080
       - DB_URL=app:password@tcp(db:3306)/movies?charset=utf8mb4&parseTime=True&loc=Local
-      - AUTH_TOKEN=${AUTH_TOKEN}
-      - BOXOFFICE_URL=${BOXOFFICE_URL}
-      - BOXOFFICE_API_KEY=${BOXOFFICE_API_KEY}
+      - AUTH_TOKEN=movie-api-test-token
+      - BOXOFFICE_URL=https://m1.apifoxmock.com/m1/7149601-6873494-default
+      - BOXOFFICE_API_KEY=0B4nmUwMPBphsKDr_u9HX
     depends_on:
       db:
         condition: service_healthy
